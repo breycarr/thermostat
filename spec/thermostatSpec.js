@@ -5,7 +5,12 @@ describe("Thermostat", function() {
   });
   it('should increase the temperature', function() {
     var thermostat = new Thermostat();
-    thermostat.up(5)
-    expect(thermostat.showTemp()).toEqual(25)
+    thermostat.up();
+    expect(thermostat.showTemp()).toEqual(21);
+  });
+  it("should decrease the temperature", function(){
+    var thermostat = new Thermostat();
+    thermostat.down();
+    expect(thermostat.showTemp()).toEqual(19);
   });
 });

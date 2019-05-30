@@ -46,7 +46,7 @@ User story 2
 ```
 As a User
 So that I can turn the temperature up when I'm cold
-I want to increase the temperature with an up function
+I want to be able increase the temperature
 ```
 Object | Message
 -|-
@@ -60,4 +60,27 @@ thermostat.showTemp()
 thermostat.up()
 thermostat.showTemp()
 // output is 21
+```
+---
+
+User story 3
+
+```
+As a User
+So that I can turn down the temperature when I'm hot
+I was to be able to decrease the temperature
+```
+
+Object | Message
+-|-
+thermostat | down
+
+Console test:
+```js
+var thermostat = new Thermostat()
+thermostat.showTemp()
+// output is 20
+thermostat.down()
+thermostat.showTemp()
+// output is 19
 ```
