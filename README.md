@@ -143,3 +143,22 @@ thermostat.powerSaveSwitch()
 thermostat.up(6)
 thermostat.up(13)
 ```
+
+User story 7
+```
+As a User
+So I can return to the starting temperature
+I would like a reset button
+
+```
+Object | Message
+-|-
+thermostat | reset
+
+Console test:
+```js
+var thermostat = new Thermostat()
+thermostat.up()
+thermostat.reset()
+thermostat.showTemp()
+```

@@ -16,7 +16,7 @@ describe("Thermostat", function() {
   });
   it("should throw an error if temperature would go below 10", function(){
     var thermostat = new Thermostat();
-    expect( function(){ thermostat.down(11); } ).toThrow("Temperature can't go below 10!")
+    expect( function(){ thermostat.down(11); } ).toThrow("Temperature can't go below 10!");
   });
   it('should allow the max temperature to be 25 if the power saving is on', function() {
     var thermostat = new Thermostat();
@@ -31,5 +31,11 @@ describe("Thermostat", function() {
     var thermostat = new Thermostat();
     thermostat.powerSaveSwitch();
     expect( function(){ thermostat.up(13); } ).toThrow("Temperature can't go above 32!");
+  });
+  it("should allow user to reset temperature to starting temperature", function(){
+    var thermostat = new Thermostat();
+    thermostat.up();
+    thermostat.reset()
+    expect(thermostat.showTemp()).toEqual(20);
   });
 });
