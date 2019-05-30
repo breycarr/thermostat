@@ -103,3 +103,23 @@ Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.down(11)
+```
+
+----
+User story 5
+```
+As a user
+In order to reduce my electricity usage
+If Power Saving Mode is turned on then the maximum temperature should not exceed 25 degrees
+
+```
+Object | Message
+-|-
+thermostat | up
+thermostat | powerSave (default state)
+
+Console test:
+```js
+var thermostat = new Thermostat()
+thermostat.up(6)
+```

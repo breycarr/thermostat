@@ -1,6 +1,7 @@
 function Thermostat() {
   this._temperature = 20;
   this._minTemp = 10;
+  this._maxTemp = 25;
 }
 
 Thermostat.prototype.showTemp = function() {
@@ -8,6 +9,7 @@ Thermostat.prototype.showTemp = function() {
 }
 
 Thermostat.prototype.up = function(increase = 1) {
+  if (this._temperature + increase > this._maxTemp) throw "Temperature can't go above 25 in power save!"
   this._temperature = this._temperature + increase;
 }
 
