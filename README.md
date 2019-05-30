@@ -18,7 +18,7 @@ The purpose of this project is to build a thermostat in JavaScript.
 
 ---
 
-User story 1
+## ## User Story 1
 
 ```
 As a user who wants to use the Thermostat
@@ -31,7 +31,7 @@ Object | Message
 thermostat | show
  | Output should be 20 degrees
 
-Console test:
+### ### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.showTemp()
@@ -40,7 +40,7 @@ thermostat.showTemp()
 ```
 ---
 
-User story 2
+## ## User Story 2
 
 ```
 As a User
@@ -51,7 +51,7 @@ Object | Message
 -|-
 thermostat | up
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.showTemp()
@@ -62,7 +62,7 @@ thermostat.showTemp()
 ```
 ---
 
-User story 3
+## User Story 3
 
 ```
 As a User
@@ -74,7 +74,7 @@ Object | Message
 -|-
 thermostat | down
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.showTemp()
@@ -86,7 +86,7 @@ thermostat.showTemp()
 
 
 ----
-User story 4
+## User Story 4
 
 ```
 As a user
@@ -98,14 +98,14 @@ Object | Message
 -|-
 thermostat | down
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.down(11)
 ```
 
 ----
-User story 5
+## User Story 5
 ```
 As a user
 In order to reduce my electricity usage
@@ -116,13 +116,13 @@ Object | Message
 -|-
 thermostat | up
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.up(6)
 ```
 
-User story 6
+## User Story 6
 ```
 As a user
 Because I sometimes want to be even warmer
@@ -134,7 +134,7 @@ Object | Message
 thermostat | up
 thermostat | powerSaveSwitch
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.up(6)
@@ -143,7 +143,7 @@ thermostat.up(6)
 thermostat.up(13)
 ```
 
-User story 7
+## User Story 7
 ```
 As a User
 So I can return to the starting temperature
@@ -154,7 +154,7 @@ Object | Message
 -|-
 thermostat | reset
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.up()
@@ -162,7 +162,7 @@ thermostat.reset()
 thermostat.showTemp()
 ```
 
-User story 8
+## User Story 8
 ```
 As a User
 So I can check energy usage, I would like to know know high usage, medium
@@ -173,7 +173,7 @@ Object | Message
 -|-
 thermostat | usage
 
-Console test:
+### Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.usage()
