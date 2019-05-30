@@ -3,4 +3,9 @@ describe("Thermostat", function() {
     var thermostat = new Thermostat();
     expect(thermostat.showTemp()).toEqual(20);
   });
+  it('should increase the temperature', function() {
+    var thermostat = new Thermostat();
+    thermostat.up(5)
+    expect(thermostat.showTemp()).toEqual(25)
+  });
 });
