@@ -38,4 +38,19 @@ describe("Thermostat", function() {
     thermostat.reset()
     expect(thermostat.showTemp()).toEqual(20);
   });
+  it("should show medium usage, between 18 and 25 degrees,", function(){
+    var thermostat = new Thermostat();
+    expect(thermostat.usage()).toEqual("medium");
+  });
+  it("should show low usage is less than 18,", function(){
+    var thermostat = new Thermostat();
+    thermostat.down(3)
+    expect(thermostat.usage()).toEqual("low");
+  });
+  it("should show high usage is greater than 25,", function(){
+    var thermostat = new Thermostat();
+    thermostat.powerSaveSwitch()
+    thermostat.up(6)
+    expect(thermostat.usage()).toEqual("high");
+  });
 });

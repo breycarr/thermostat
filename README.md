@@ -162,3 +162,19 @@ thermostat.up()
 thermostat.reset()
 thermostat.showTemp()
 ```
+
+User story 8
+```
+As a User
+So I can check energy usage, I would like to know know high usage, medium
+and low usage
+
+```
+Object | Message
+-|-
+thermostat | usage
+
+Console test:
+```js
+var thermostat = new Thermostat()
+thermostat.usage()
