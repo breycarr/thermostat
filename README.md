@@ -116,10 +116,30 @@ If Power Saving Mode is turned on then the maximum temperature should not exceed
 Object | Message
 -|-
 thermostat | up
-thermostat | powerSave (default state)
 
 Console test:
 ```js
 var thermostat = new Thermostat()
 thermostat.up(6)
+```
+
+User story 6
+```
+As a user
+Because I sometimes want to be even warmer
+I want to be able to deactivate powersaving mode, and have a maximum temperature of 32
+
+```
+Object | Message
+-|-
+thermostat | up
+thermostat | powerSaveSwitch
+
+Console test:
+```js
+var thermostat = new Thermostat()
+thermostat.up(6)
+thermostat.powerSaveSwitch()
+thermostat.up(6)
+thermostat.up(13)
 ```
