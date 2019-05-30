@@ -1,5 +1,6 @@
 function Thermostat() {
   this._temperature = 20;
+  this._minTemp = 10;
 }
 
 Thermostat.prototype.showTemp = function() {
@@ -11,5 +12,6 @@ Thermostat.prototype.up = function(increase = 1) {
 }
 
 Thermostat.prototype.down = function(decrease = 1) {
+  if (this._temperature - decrease < this._minTemp) throw "Temperature can't go below 10!"
   this._temperature = this._temperature - decrease;
 }

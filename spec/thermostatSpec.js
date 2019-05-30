@@ -13,4 +13,8 @@ describe("Thermostat", function() {
     thermostat.down();
     expect(thermostat.showTemp()).toEqual(19);
   });
+  it("should throw an error if temperature would go below 10", function(){
+    var thermostat = new Thermostat();
+    expect( function(){ thermostat.down(11); } ).toThrow("Temperature can't go below 10!")
+  });
 });
